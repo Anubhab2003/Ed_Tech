@@ -1,10 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import process from "dotenv";
 
-{
-  process.env.NODE_ENV === "development";
-}
 
 function Home() {
   const [data, setData] = useState("");
