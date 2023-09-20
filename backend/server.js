@@ -10,8 +10,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 app.get('/home', (req,res)=>{
-    res.json({message: "hello from welcome page!"});
+    res.json({title: "hello from welcome page!"});
 })
+
+
+// Serve the index.html file for all non-static requests
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(port, (err)=>{
     if(err){
