@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import logo from '../assets/logo.png';
 
 
 function Home() {
@@ -14,7 +15,9 @@ function Home() {
   if(typeof data != 'undefined'){
     return(
         <>
-            <h1>{data.message}</h1>
+            <nav>
+            <img src={logo} alt="dezire"/>
+            </nav>
         </>
     )
   }else{
