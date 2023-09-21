@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import "../styles/home.scss";
+import NotFound from "./NotFound";
 
 function Home() {
   const [data, setData] = useState("");
@@ -12,7 +13,7 @@ function Home() {
     };
     getData();
   }, [data]);
-  
+
   if (typeof data != "undefined") {
     return (
       <>
@@ -52,7 +53,7 @@ function Home() {
   } else {
     return (
       <>
-        <h1>no data</h1>
+        <NotFound/>
       </>
     );
   }
