@@ -12,6 +12,7 @@ function Home() {
     };
     getData();
   }, [data]);
+  
   if (typeof data != "undefined") {
     return (
       <>
