@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import "../styles/home.scss";
 import NotFound from "./NotFound";
+import Navbar from "./Navbar";
 
 function Home() {
   const [data, setData] = useState("");
@@ -14,46 +13,16 @@ function Home() {
     getData();
   }, [data]);
 
-  if (typeof data != "undefined") {
+  if (typeof data.main != "undefined") {
     return (
       <>
-        <nav className="navbar">
-          <img src={logo} alt="dezire" className="logo-img" />
-          <ul className="nav">
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                Home
-              </a>{" "}
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                Dashboard
-              </a>{" "}
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                Courses
-              </a>{" "}
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                Labs
-              </a>{" "}
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                {" "}
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
       </>
     );
   } else {
     return (
       <>
-        <NotFound/>
+        <NotFound />
       </>
     );
   }
