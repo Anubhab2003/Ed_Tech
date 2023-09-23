@@ -34,8 +34,29 @@ $color2: #fb5607;
     }
     .btn:hover{
         color: white;
-        background-color: #f34a23;
+        background-color: $color1;
     }
 }
 
+.intro{
+    font-family: $font;
+    text-align: center;
+    margin-top: 20em;
+    background-color: $color1;
+    padding: 5em;
+
+    h2{
+        margin-bottom: 2em;
+        color: #191919;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    p{
+        width: 70%;
+        margin-left: 9em;
+        color: white;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
 
