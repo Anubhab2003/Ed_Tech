@@ -43,11 +43,19 @@ function Home() {
               style={{ fontSize: "2em", display: "inline-block" }}
               repeat={Infinity}
             />
-            <a className="btn" href="#">Get started</a>
+            <a className="btn" href="#">
+              Get started
+            </a>
           </div>
 
           <img src={gifSrc} alt="gif" />
         </div>
+        <main className="intro">
+          <h2>
+          Welcome to Dezire: Your Coding Companion
+          </h2>
+          <p>Are you eager to embark on an exciting coding journey? Look no further than Dezire – your ultimate destination for comprehensive notes, enlightening tutorials, and handpicked YouTube videos to fuel your passion for coding. Whether you are a seasoned developer seeking to refine your skills or a budding coder taking your first steps, Dezire is here to empower and inspire you.</p>
+        </main>
       </>
     );
   } else {
