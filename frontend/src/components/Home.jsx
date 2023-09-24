@@ -6,12 +6,15 @@ import { TypeAnimation } from "react-type-animation";
 import "../styles/home.scss";
 import gifSrc from "../assets/Programmer.gif";
 import Footer from "./Footer";
+import {Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
+import GetStarted from "./GetStarted";
 
 function Home() {
   const [data, setData] = useState("");
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get("http://localhost:3000/home");
+      const res = await axios.get("http://localhost:3000");
       setData(res.data);
     };
     getData();
@@ -44,9 +47,11 @@ function Home() {
               style={{ fontSize: "2em", display: "inline-block" }}
               repeat={Infinity}
             />
-            <a className="btn" href="#">
-              Get started
-            </a>
+            <Link  className="btn" to="/user/getStarted">Get Started</Link>
+            <Routes>
+              <Route exact path="/user/getStarted" element={<GetStarted/>}/>
+            </Routes>
+            
           </div>
 
           <img src={gifSrc} alt="gif" />
