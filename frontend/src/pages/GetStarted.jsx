@@ -1,6 +1,6 @@
 import{useState,useEffect} from 'react';
 import axios from 'axios';
-import NotFound from './NotFound';
+import NotFound from '../components/NotFound';
 
 function GetStarted(){
     const [value, setValue] = useState("");

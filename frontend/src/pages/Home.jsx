@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NotFound from "./NotFound";
-import Navbar from "./Navbar";
+import NotFound from "../components/NotFound";
+import Navbar from "../components/Navbar";
 import { TypeAnimation } from "react-type-animation";
 import "../styles/home.scss";
 import gifSrc from "../assets/Programmer.gif";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import {Link} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
 import GetStarted from "./GetStarted";
+
 
 function Home() {
   const [data, setData] = useState("");
@@ -49,7 +50,7 @@ function Home() {
             />
             <Link  className="btn" to="/user/getStarted">Get Started</Link>
             <Routes>
-              <Route exact path="/user/getStarted" element={<GetStarted/>}/>
+              <Route path="/user/getStarted" Component={GetStarted}/>
             </Routes>
             
           </div>
